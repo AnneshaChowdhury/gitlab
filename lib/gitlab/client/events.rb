@@ -54,7 +54,7 @@ class Gitlab::Client
     # @option options [String] :sort Sort by created_at either 'asc' or 'desc'
     # @return [Array<Gitlab::ObjectifiedHash>]
     def project_events(project, options = {})
-      get("/#{url_encode project}/events", query: options)
+      get("/projects/#{url_encode project}/events", query: options)
     end
   end
 end
